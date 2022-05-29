@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "@tweenjs/tween.js": "^18.6.4",
+    "express": "^4.17.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "checkers-wn",
+  "version": "1.0.0",
+  "description": "checkers project",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "checkers-wn"
+  },
+  "author": "wn",
+  "license": "ISC"
+}

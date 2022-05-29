@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkers</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        label {
+            left: 30px;
+            top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+        }
+    </style>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./../../libs/tween.umd.js"></script>
+    <script src="./../../libs/three.js"></script>
+    <script src="Main.js" type="module"></script>
+</head>
+
+<body>
+    <div id="ui">
+        <div class="top-bar">
+            <div id="status"></div>
+            <div id="timer"></div>
+        </div>
+
+        <div id="login-holder" class="holder">
+            <div id="userLogin" class="login">
+                <h2>Login</h2>
+                <input type="text" class="login-input" id="login-input" placeholder="username">
+                <button id="login-play-btn" class="btn">Play</button>
+                <button id="login-reset-btn" class="btn">Reset</button>
+            </div>
+        </div>
+
+        <div class="holder">
+            <div id="display" class="display">
+
+            </div>
+        </div>
+
+        <div class="holder">
+            <div id="end" class="display end">
+                <div id="end-msg"></div>
+                <button id="end-btn" class="btn">Play Again</button>
+            </div>
+        </div>
+
+        <div class="debug" id="debug">
+
+        </div>
+    </div>
+
+    <div id="root"></div>
+</body>
+
+
+
+
+</html>
