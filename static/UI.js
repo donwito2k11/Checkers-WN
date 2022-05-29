@@ -34,16 +34,18 @@ class UI {
     }
 
     updateTable() {
+        console.log(window.game.isWhite)
         if (window.game.isWhite) {
-            document.getElementById("debug").innerHTML = window.game.pawnsTable.map(r => r.map(i => i == 0 ? ` ${i} `
-                : i == 1 ? `<span class="white">  ${i}  </span>`
-                    : `<span class="black">  ${i}  </span>`).join('')).join("</br>");
-        }
-        else {
-            let lol = window.game.pawnsTable
-            document.getElementById("debug").innerHTML = lol.reverse().map(r => r.reverse().map(i => i == 0 ? ` ${i} `
-                : i == 1 ? `<span class="white"> ${i} </span>`
-                    : `<span class="black">  ${i}  </span>`).join('')).join("</br>");
+            document.getElementById("debug").innerHTML = window.game.pawnsTable.map(r => r.map(i => i == 0 ? `<div class="gray"> ${i} </div>`
+                : i == 1 ? `<div class="white"> ${i} </div>`
+                    : `<div class="black"> ${i} </div>`).join('')).join("</br>");
+        } else {
+            var sus = window.game.pawnsTable.map(function (arr) {
+                return arr.slice();
+            });
+            document.getElementById("debug").innerHTML = sus.reverse().map(r => r.reverse().map(i => i == 0 ? `<div class="gray"> ${i} </div>`
+                : i == 1 ? `<div class="white"> ${i} </div>`
+                    : `<div class="black"> ${i} </div>`).join('')).join("</br>");
         }
     }
 
