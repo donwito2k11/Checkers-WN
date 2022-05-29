@@ -98,11 +98,6 @@ app.post("/update", function (req, res) {
         }));
     }
     else if (p.state == 4) {
-        console.log("Reset players")
-        players = []
-        playing = -1;
-        gameRunning = false;
-
         res.setHeader("content-type", 'application/json')
         res.send(JSON.stringify({
             state: 4,
