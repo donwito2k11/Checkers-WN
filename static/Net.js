@@ -67,7 +67,7 @@ class Net {
             .then(response => response.json())
             .then(
                 data => {
-                    if (data.state == 5) {
+                    if (data.state == 5 && window.game.isPlaying) {
                         clearInterval(this.intervalid)
                         window.location.replace(window.location)
                         window.ui.setStatus("RESET: Another client has forcefully reset the game.")
